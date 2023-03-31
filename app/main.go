@@ -5,7 +5,9 @@ import (
 	"log"
 	"net"
 
-	tendermintv1beta1 "github.com/dedicatedDev/txbroker/pkg/cosmos/base/tendermint/v1beta1"
+	tracker "github.com/dedicatedDev/txproxy/app/service/tracker"
+	tendermintv1beta1 "github.com/dedicatedDev/txproxy/pkg/cosmos/base/tendermint/v1beta1"
+
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )
@@ -50,6 +52,9 @@ func main() {
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
+
+	// start tracker
+	go tracker.TrackState(osmosisClient, 5*1)
 
 	// Start serving gRPC requests
 	log.Println("Server is listening on localhost:9000")

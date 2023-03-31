@@ -1,4 +1,4 @@
-module github.com/dedicatedDev/txbroker
+module github.com/dedicatedDev/txproxy
 
 go 1.20
 

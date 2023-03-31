@@ -1,4 +1,4 @@
-package statetracker
+package tracker
 
 import (
 	"context"
@@ -10,7 +10,7 @@ import (
 	"sort"
 	"time"
 
-	tendermintv1beta1 "github.com/dedicatedDev/txbroker/pkg/cosmos/base/tendermint/v1beta1"
+	tendermintv1beta1 "github.com/dedicatedDev/txproxy/pkg/cosmos/base/tendermint/v1beta1"
 )
 
 type TestResult struct {

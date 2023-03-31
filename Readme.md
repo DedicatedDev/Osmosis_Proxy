@@ -71,3 +71,6 @@ localhost:9000 cosmos.base.tendermint.v1beta1.Service/GetLatestBlock
 If you want to generate proto file from scratch, please run follow command.
 `make proto-gen`
 It will generate types ./pkg folder.
+
+This project was built for mock. There are many improvement points. 
+
